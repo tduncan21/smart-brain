@@ -24,6 +24,7 @@ class Register extends React.Component {
 	}
 
 	onSubmitRegister = () => {
+		this.props.toggleLoader(true);
 		fetch('https://cryptic-headland-91421.herokuapp.com/register', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
@@ -40,6 +41,7 @@ class Register extends React.Component {
 				this.props.onRouteChange('home');
 			}
 		})
+		this.props.toggleLoader(false);	
 	}
 
 	render() {

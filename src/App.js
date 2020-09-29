@@ -185,7 +185,7 @@ class App extends React.Component {
         : (
             route === 'signin' || route === 'signout'
             ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange} toggleLoader={this.toggleLoader}/> 
-            : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+            : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} toggleLoader={this.toggleLoader}/>
           )
         }   
         {(loader) && <Loader/>}
